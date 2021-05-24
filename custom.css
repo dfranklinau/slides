@@ -1,0 +1,44 @@
+/*----------------------------------------------------------------------------*\
+  #CUSTOMISATION
+\*----------------------------------------------------------------------------*/
+
+/**
+ * Place any extensions to the boilerplate styles here. This can include:
+ *
+ * - header and footer positioning;
+ * - padding offsets on slides for the headers and footers;
+ * - nth slide targeting; and
+ * - anything else you can think of.
+ */
+
+.slide-header {
+  top: 2rem;
+  left: 2rem;
+  margin-bottom: 0;
+}
+
+.slide-footer {
+  right: 2rem;
+  bottom: 2rem;
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+/**
+ * The styles from `https://www.danielfranklin.id.au/css/main.css` set this to
+ * `none`, need to unset it.
+ */
+@media print {
+  .o-footer {
+    display: block;
+  }
+}
+
+.slide {
+  background-color: var(--color-background);
+  padding: 2rem;
+  padding-top: 8.5rem;
+  padding-bottom: 6rem;
+  font-size: 4vw;
+}

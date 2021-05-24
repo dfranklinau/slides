@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/*!
+ * slides.
+ * Copyright (c) 2021, Daniel Franklin
+ * Licensed under ISC
+ */
+
+/*---------------------------------------------------------------------------*\
+
+  GENERIC
+  ---------------------------------------------------------------------------
+  Reset
+
+  COMPONENTS
+  ---------------------------------------------------------------------------
+  Slide
+  Slide Footer
+  Slide Header
+
+  UTILITIES
+  ---------------------------------------------------------------------------
+  Typography
+
+\*---------------------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------------------------------------------------------------*\
+  #GENERIC
+\*----------------------------------------------------------------------------*/
+
+/*------------------------------------*\
+  #RESET
+\*------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+/**
+ * Removes any page margins from the page, although specific print options might
+ * override this.
+ */
+@page {
+  margin: 0;
+}
+
+/**
+ * `height: 100%` is to support full-height slides across browsers.
+ *
+ * I tried using `height: 100vh` on the `.slide` class but ran into
+ * cross-browser compatibility issues where slides in Firefox were not the full
+ * height of the printed page.
+ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Define the vertical rhythm and spacing on the elements that need it.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------*\
+  #COMPONENTS
+\*----------------------------------------------------------------------------*/
+
+/*------------------------------------*\
+  #SLIDE
+\*------------------------------------*/
+
+.slide {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+/*------------------------------------*\
+  #SLIDE-HEADER
+\*------------------------------------*/
+
+/**
+ * The slide header and footer will be printed on every page because of
+ * `position: fixed`;
+ */
+.slide-header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+
+/*------------------------------------*\
+  #SLIDE-HEADER
+\*------------------------------------*/
+
+.slide-footer {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------*\
+  #UTILITIES
+\*----------------------------------------------------------------------------*/
+
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Typography-specific styling is offered as an opt-in experience.
+ */
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6,
+.typography p,
+.typography ul,
+.typography ol,
+.typography blockquote {
+  margin-bottom: 1.5rem;
+}
+
+.typography ul,
+.typography ol {
+  padding-left: 1rem;
+}
+
+.typography li + li {
+  margin-top: 0.5rem;
+}
